@@ -1,8 +1,9 @@
 # MiniList
 This is a mini list template.
 
-## To use this list template, you need define two class, refer to unittests for examples.
+## To use this list template, you need define two classes with following requirement, refer to unittests for examples.
 
+```c
 class TList; // List with node type T
 class T; // List Node.
 
@@ -21,4 +22,5 @@ public:
 
   int data; // any other data
 };
+```
 
