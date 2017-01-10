@@ -22,5 +22,14 @@ public:
 
   int data; // any other data
 };
+
+int main() {
+  IntList list;
+  Int obj;
+  Int obj1;
+
+  listInit(&list);  
+  listInsertFirst(&list, &obj);
+}
 ```
 
