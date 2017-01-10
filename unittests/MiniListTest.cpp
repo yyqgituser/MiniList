@@ -62,3 +62,5 @@ TEST(listInsertLastTest, InsertLastTestCase) {
   EXPECT_EQ(list.tail, &obj1); 
   EXPECT_EQ(list.size, 2); 
 }
+
+// To do: add more unit test
