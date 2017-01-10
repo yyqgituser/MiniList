@@ -6,32 +6,21 @@ This is a mini list template.
 ```c
 #include <MiniList.h>
 
-class TList; // List with node type T
-class T; // List Node.
-
-class TList {
+class Int {
 public:
-  T *head; // point to first object in list
-  T *tail; // point last object in list
-  unsigned int size; // the number of nodes
-};
+  Int *next;
+  Int *prev;
 
-class T {
-public:
-  T *next; // next object, 0 if no
-  T *prev; // previous object, 0 if no
-  TList *owner; // who own this object
-
-  int data; // any other data
+  int data;
 };
 
 int main() {
-  IntList list;
+  MiniList<Int> list;
   Int obj;
   Int obj1;
 
-  listInit(&list);  
-  listInsertFirst(&list, &obj);
+  list.insertFirst(&obj);
+  list.insertLast(&obj1);
 }
 ```
 
