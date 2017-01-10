@@ -43,6 +43,10 @@ template<typename TList> inline bool listIsEmpty(TList *list) {
   return (list->size == 0);
 }
 
+template<typename TList> inline unsigned int listSize(TList *list) {
+  return list->size;
+}
+
 template<typename TList, typename T> inline void listInsertFirst(TList *list, T *object) {
   if(list->head != 0) {
     object->next = list->head;
