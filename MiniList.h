@@ -2,36 +2,26 @@
 #define _MINI_LIST_H
 
 /**************************************************************************/
-// member(must public) requirement to use this list template
-
+// member requirement to use this list template
 /*
-class TList; // List with node type T
-class T; // List Node.
-
-class TList {
+class Int {
 public:
-  T *head; // point to first object in list
-  T *tail; // point last object in list
-  unsigned int size; // the number of nodes
+  Int *next;
+  Int *prev;
+
+  int data;
 };
 
-class T {
-public:
-  T *next; // next object, 0 if no
-  T *prev; // previous object, 0 if no
-  TList *owner; // who own this object
+int main() {
+  MiniList<Int> list;
+  Int obj;
+  Int obj1;
 
-  int data; // any other data
-};
-
+  list.insertFirst(&obj);
+  list.insertLast(&obj1);
+}
 */
 /**************************************************************************/
-
-// TList: Type of List
-// T: Type of List Node
-
-// TList *list: list
-// initialize a list
 
 template<typename T> class MiniList {
 private:
@@ -101,7 +91,6 @@ public:
       newObject->next = 0;
       tail = newObject;
       object->next = newObject;
-
     }
 
     objNum++;
@@ -119,7 +108,6 @@ public:
       newObject->prev = 0;
       head = newObject;
       object->prev = newObject;
-
     }
 
     objNum++;
@@ -140,7 +128,7 @@ public:
       tail = object->prev;
     }
 
-    object->owner->size--;
+    objNum--;
   }
 };
 
